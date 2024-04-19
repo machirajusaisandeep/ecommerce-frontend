@@ -3,11 +3,7 @@ import { DummyShoes } from "@/constants/DummyShoes";
 import React from "react";
 
 const ProductsPage = () => {
-  return (
-    <div>
-      <ProductList title="Shoes" products={DummyShoes} />
-    </div>
-  );
+  return <ProductList title="Shoes" products={DummyShoes} />;
 };
 
 export default ProductsPage;
