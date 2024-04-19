@@ -4,12 +4,17 @@ import { Shoe } from "@/types/Shoe";
 import Image from "next/image";
 import React from "react";
 import styles from "./products.module.css";
+import { useRouter } from "next/navigation";
 
 const ProductCard = (props: Shoe) => {
+  const router = useRouter();
+
   const { modelName, price, images, colors, material } = props;
   const primaryImage = images ? images[0] : "";
 
-  const openProduct = () => {};
+  const openProduct = () => {
+    router.push("/products/1");
+  };
 
   return (
     <div className={styles.productCard} onClick={openProduct}>

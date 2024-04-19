@@ -12,4 +12,4 @@ interface Cart {
   couponsApplicable: Array<string>;
   appliedCoupon: string;
 }
-export type { Cart };
+export type { CartProduct, Cart };
