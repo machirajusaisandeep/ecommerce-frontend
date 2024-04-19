@@ -6,7 +6,7 @@ import React from "react";
 import styles from "./products.module.css";
 
 const ProductCard = (props: Shoe) => {
-  const { name, price, images, colors, material } = props;
+  const { modelName, price, images, colors, material } = props;
   const primaryImage = images ? images[0] : "";
 
   const openProduct = () => {};
@@ -16,11 +16,11 @@ const ProductCard = (props: Shoe) => {
       <Image
         className={styles.productImage}
         src={primaryImage}
-        alt={name}
+        alt={modelName}
         width={200}
         height={200}
       />
-      <p className={styles.title}>{name}</p>
+      <p className={styles.title}>{modelName}</p>
       <div className={styles.otherDetails}>
         <span>{colors?.length}</span>
         <span>{material}</span>
