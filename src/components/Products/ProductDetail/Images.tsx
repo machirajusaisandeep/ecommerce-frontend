@@ -17,7 +17,7 @@ const Images = ({ data }: { data: Array<string> }) => {
   };
 
   return (
-    <div>
+    <div className={styles.sectionWrapper}>
       <Image
         src={data[primaryImgIndex]}
         width={200}
