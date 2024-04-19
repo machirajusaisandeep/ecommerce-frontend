@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import styles from "./productDetail.module.css";
 
 const Images = ({ data }: { data: Array<string> }) => {
   const [primaryImgIndex, setPrimaryImgIndex] = useState(0);
@@ -21,8 +23,9 @@ const Images = ({ data }: { data: Array<string> }) => {
         width={200}
         height={200}
         alt={`image-${primaryImgIndex}`}
+        className={styles.primaryImage}
       />
-      <div>
+      <div className={styles.secondary}>
         {data?.map((src, index) => {
           return primaryImgIndex != index ? (
             <Image
@@ -35,7 +38,9 @@ const Images = ({ data }: { data: Array<string> }) => {
             />
           ) : null;
         })}
-        <div onClick={onNext}>next</div>
+        <button className={styles.nextButton} onClick={onNext}>
+          <ChevronRightIcon />
+        </button>
       </div>
     </div>
   );

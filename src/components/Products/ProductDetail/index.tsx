@@ -1,5 +1,4 @@
 import React from "react";
-import Images from "./Images";
 import GeneralDetails from "./GeneralDetails";
 import { DummyShoes } from "@/constants/DummyShoes";
 
@@ -12,8 +11,8 @@ const ProductDetail = (props: GeneralDetails) => {
 
   return (
     <div>
-      <Images data={product.images} />
-      <GeneralDetails />
+      {/* <Images data={product.images} /> */}
+      <GeneralDetails {...product} />
     </div>
   );
 };
