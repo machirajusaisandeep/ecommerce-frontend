@@ -1,0 +1,22 @@
+.pageWrapper {
+  width: 1366px;
+  margin: auto;
+}
+
+/* navbar */
+
+.navBar {
+  width: 100%;
+  padding: 1rem 0;
+  height: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .cartIcon {
+  width: 24px;
+  height: 24px;
+}
